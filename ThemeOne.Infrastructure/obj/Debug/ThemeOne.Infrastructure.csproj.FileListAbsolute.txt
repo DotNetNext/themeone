@@ -1,0 +1,10 @@
+F:\OneDrive\Asp.net\学习DEMO\ThemeOne\ThemeOne.Infrastructure\bin\Debug\ThemeOne.Infrastructure.dll
+F:\OneDrive\Asp.net\学习DEMO\ThemeOne\ThemeOne.Infrastructure\bin\Debug\ThemeOne.Infrastructure.pdb
+F:\OneDrive\Asp.net\学习DEMO\ThemeOne\ThemeOne.Infrastructure\obj\Debug\ThemeOne.Infrastructure.dll
+F:\OneDrive\Asp.net\学习DEMO\ThemeOne\ThemeOne.Infrastructure\obj\Debug\ThemeOne.Infrastructure.pdb
+F:\OneDrive\Asp.net\学习DEMO\ThemeOne\ThemeOne.Infrastructure\bin\Debug\SqlSugar.dll
+F:\OneDrive\Asp.net\学习DEMO\ThemeOne\ThemeOne.Infrastructure\obj\Debug\ThemeOne.Infrastructure.csprojResolveAssemblyReference.cache
+F:\OneDrive\Asp.net\学习DEMO\ThemeOne\ThemeOne.Infrastructure\bin\Debug\SyntacticSugar.dll
+F:\OneDrive\Asp.net\学习DEMO\ThemeOne\ThemeOne.Infrastructure\bin\Debug\ThemeOne.Entities.dll
+F:\OneDrive\Asp.net\学习DEMO\ThemeOne\ThemeOne.Infrastructure\bin\Debug\ThemeOne.Entities.pdb
+F:\OneDrive\Asp.net\学习DEMO\ThemeOne\ThemeOne.Infrastructure\bin\Debug\SyntacticSugar.pdb
