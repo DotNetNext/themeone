@@ -1,6 +1,1 @@
-﻿$(function () { 
-  
-   jqxAlert("a")
-
-
-})
+﻿ 

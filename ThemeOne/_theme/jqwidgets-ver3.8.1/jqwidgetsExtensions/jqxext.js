@@ -61,6 +61,7 @@ function jqxConfirm(okFun, msg, title) {
 
 function jqxWindow(selector, title, width, height) {
     $(selector).show();
+    $(selector).removeClass("hide");
     if ($(selector).find(".jqx-window-content").size() > 0) {
         $(selector).jqxWindow("open");
     } else {

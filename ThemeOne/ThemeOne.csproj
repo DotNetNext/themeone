@@ -75,6 +75,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\ListApp\Domain\GirdModel.cs" />
+    <Compile Include="Areas\Admin\Controllers\ListApp\ListController.cs" />
     <Compile Include="Areas\Area1\Area1AreaRegistration.cs" />
     <Compile Include="Areas\Area2\Area2AreaRegistration.cs" />
     <Compile Include="BuilderClass.aspx.cs">
@@ -86,7 +88,6 @@
     </Compile>
     <Compile Include="Controllers\ErrorApp\ErrorController.cs" />
     <Compile Include="Controllers\HomeApp\HomeController.cs" />
-    <Compile Include="Controllers\StaticFileController.cs" />
     <Compile Include="Controllers\UserApp\Domain\UserDomain.cs" />
     <Compile Include="Controllers\UserApp\UserController.cs" />
     <Compile Include="Global.asax.cs">
@@ -98,8 +99,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Admin\Views\_css\list.css" />
+    <Content Include="Areas\Admin\Views\_js\list.js" />
     <Content Include="Areas\Area1\Views\_cs\test.css" />
     <Content Include="BuilderClass.aspx" />
+    <Content Include="Views\_js\demo.js" />
     <Content Include="Views\_js\login.js" />
     <Content Include="_demo\index.html" />
     <Content Include="_demo\theme\assets\avatars\avatar.png" />
@@ -239,6 +243,12 @@
     <Content Include="_theme\avatars\avatar5.png" />
     <Content Include="_theme\avatars\profile-pic.jpg" />
     <Content Include="_theme\avatars\user.jpg" />
+    <Content Include="_theme\login2\css3-batman-login-form\css\reset.css" />
+    <Content Include="_theme\login2\css3-batman-login-form\css\style.css" />
+    <Content Include="_theme\login2\css3-batman-login-form\index.html" />
+    <Content Include="_theme\login2\css3-batman-login-form\js\jquery.js" />
+    <Content Include="_theme\login2\css3-batman-login-form\js\modernizr.js" />
+    <Content Include="_theme\login2\css3-batman-login-form\js\prefixfree.min.js" />
     <Content Include="_theme\css\ace-ie.min.css" />
     <Content Include="_theme\css\ace-rtl.min.css" />
     <Content Include="_theme\css\ace-skins.min.css" />
@@ -834,6 +844,20 @@
     <Content Include="_theme\jqwidgets-ver3.8.1\scripts\bootstrap.min.js" />
     <Content Include="_theme\jqwidgets-ver3.8.1\scripts\demos.js" />
     <Content Include="_theme\jqwidgets-ver3.8.1\scripts\documentation.js" />
+    <Content Include="_theme\login3\LoginRegistrationForm\css\animate-custom.css" />
+    <Content Include="_theme\login3\LoginRegistrationForm\css\demo.css" />
+    <Content Include="_theme\login3\LoginRegistrationForm\css\fonts\BebasNeue-webfont.svg" />
+    <Content Include="_theme\login3\LoginRegistrationForm\css\fonts\Dharma Type Font License.txt" />
+    <Content Include="_theme\login3\LoginRegistrationForm\css\fonts\fontomas-webfont.svg" />
+    <Content Include="_theme\login3\LoginRegistrationForm\css\fonts\franchise-bold-webfont.svg" />
+    <Content Include="_theme\login3\LoginRegistrationForm\css\style.css" />
+    <Content Include="_theme\login3\LoginRegistrationForm\css\style2.css" />
+    <Content Include="_theme\login3\LoginRegistrationForm\css\style3.css" />
+    <Content Include="_theme\login3\LoginRegistrationForm\images\bg.jpg" />
+    <Content Include="_theme\login3\LoginRegistrationForm\images\ImageAttribution.txt" />
+    <Content Include="_theme\login3\LoginRegistrationForm\index.html" />
+    <Content Include="_theme\login3\LoginRegistrationForm\index2.html" />
+    <Content Include="_theme\login3\LoginRegistrationForm\index3.html" />
     <Content Include="_theme\login\css\login.css" />
     <Content Include="_theme\login\images\icon-pwd.png" />
     <Content Include="_theme\login\images\icon-user.gif" />
@@ -930,7 +954,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Areas\Admin\Controllers\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Areas\Area1\Controllers\" />
@@ -955,9 +978,12 @@
     <Content Include="Areas\Area2\Views\Web.config" />
     <Content Include="Areas\Admin\Views\Web.config" />
     <Content Include="Views\User\Login.cshtml" />
+    <Content Include="Areas\Admin\Views\List\Index.cshtml" />
     <None Include="_demo\theme\assets\avatars\Thumbs.db" />
     <None Include="_demo\theme\assets\css\images\Thumbs.db" />
     <None Include="_demo\theme\assets\font\fontawesome-webfont.woff" />
+    <None Include="_theme\login2\css3-batman-login-form\config.rb" />
+    <None Include="_theme\login2\css3-batman-login-form\scss\style.scss" />
     <None Include="_theme\css\images\Thumbs.db" />
     <None Include="_theme\font\fontawesome-webfont.woff" />
     <Content Include="Views\Home\Index.cshtml" />
@@ -978,6 +1004,15 @@
     <None Include="_theme\jqwidgets-ver3.8.1\scripts\jquery-1.10.2.min.map" />
     <None Include="_theme\jqwidgets-ver3.8.1\scripts\jquery-1.11.1.min.map" />
     <None Include="_theme\jqwidgets-ver3.8.1\scripts\jquery.mobile-1.4.3.min.map" />
+    <None Include="_theme\login3\LoginRegistrationForm\css\fonts\BebasNeue-webfont.eot" />
+    <None Include="_theme\login3\LoginRegistrationForm\css\fonts\BebasNeue-webfont.ttf" />
+    <None Include="_theme\login3\LoginRegistrationForm\css\fonts\BebasNeue-webfont.woff" />
+    <None Include="_theme\login3\LoginRegistrationForm\css\fonts\fontomas-webfont.eot" />
+    <None Include="_theme\login3\LoginRegistrationForm\css\fonts\fontomas-webfont.ttf" />
+    <None Include="_theme\login3\LoginRegistrationForm\css\fonts\fontomas-webfont.woff" />
+    <None Include="_theme\login3\LoginRegistrationForm\css\fonts\franchise-bold-webfont.eot" />
+    <None Include="_theme\login3\LoginRegistrationForm\css\fonts\franchise-bold-webfont.ttf" />
+    <None Include="_theme\login3\LoginRegistrationForm\css\fonts\franchise-bold-webfont.woff" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ThemeOne.Entities\ThemeOne.Entities.csproj">
