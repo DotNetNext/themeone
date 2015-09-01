@@ -243,6 +243,7 @@
     <Content Include="_theme\avatars\avatar5.png" />
     <Content Include="_theme\avatars\profile-pic.jpg" />
     <Content Include="_theme\avatars\user.jpg" />
+    <Content Include="_theme\jqwidgets-ver3.8.1\jqwidgets\globalization\globalize.culture.zh.js" />
     <Content Include="_theme\login2\css3-batman-login-form\css\reset.css" />
     <Content Include="_theme\login2\css3-batman-login-form\css\style.css" />
     <Content Include="_theme\login2\css3-batman-login-form\index.html" />
@@ -517,19 +518,6 @@
     <Content Include="_theme\jqwidgets-ver3.8.1\images\woman.png" />
     <Content Include="_theme\jqwidgets-ver3.8.1\jqwidgetsExtensions\jqxext.css" />
     <Content Include="_theme\jqwidgets-ver3.8.1\jqwidgetsExtensions\jqxext.js" />
-    <Content Include="_theme\jqwidgets-ver3.8.1\jqwidgets\globalization\globalize.culture.cs-CZ.js" />
-    <Content Include="_theme\jqwidgets-ver3.8.1\jqwidgets\globalization\globalize.culture.de-DE.js" />
-    <Content Include="_theme\jqwidgets-ver3.8.1\jqwidgets\globalization\globalize.culture.en-CA.js" />
-    <Content Include="_theme\jqwidgets-ver3.8.1\jqwidgets\globalization\globalize.culture.en-US.js" />
-    <Content Include="_theme\jqwidgets-ver3.8.1\jqwidgets\globalization\globalize.culture.fr-FR.js" />
-    <Content Include="_theme\jqwidgets-ver3.8.1\jqwidgets\globalization\globalize.culture.he-IL.js" />
-    <Content Include="_theme\jqwidgets-ver3.8.1\jqwidgets\globalization\globalize.culture.hr-HR.js" />
-    <Content Include="_theme\jqwidgets-ver3.8.1\jqwidgets\globalization\globalize.culture.hu-HU.js" />
-    <Content Include="_theme\jqwidgets-ver3.8.1\jqwidgets\globalization\globalize.culture.it-IT.js" />
-    <Content Include="_theme\jqwidgets-ver3.8.1\jqwidgets\globalization\globalize.culture.ja-JP.js" />
-    <Content Include="_theme\jqwidgets-ver3.8.1\jqwidgets\globalization\globalize.culture.lt.js" />
-    <Content Include="_theme\jqwidgets-ver3.8.1\jqwidgets\globalization\globalize.culture.ru-RU.js" />
-    <Content Include="_theme\jqwidgets-ver3.8.1\jqwidgets\globalization\globalize.culture.sa-IN.js" />
     <Content Include="_theme\jqwidgets-ver3.8.1\jqwidgets\globalization\globalize.js" />
     <Content Include="_theme\jqwidgets-ver3.8.1\jqwidgets\globalization\ReadMe.txt" />
     <Content Include="_theme\jqwidgets-ver3.8.1\jqwidgets\jqx-all.js" />
