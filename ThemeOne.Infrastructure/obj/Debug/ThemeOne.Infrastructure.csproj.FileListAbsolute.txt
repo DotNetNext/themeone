@@ -8,3 +8,13 @@ F:\OneDrive\Asp.net\学习DEMO\ThemeOne\ThemeOne.Infrastructure\bin\Debug\Syntac
 F:\OneDrive\Asp.net\学习DEMO\ThemeOne\ThemeOne.Infrastructure\bin\Debug\ThemeOne.Entities.dll
 F:\OneDrive\Asp.net\学习DEMO\ThemeOne\ThemeOne.Infrastructure\bin\Debug\ThemeOne.Entities.pdb
 F:\OneDrive\Asp.net\学习DEMO\ThemeOne\ThemeOne.Infrastructure\bin\Debug\SyntacticSugar.pdb
+E:\Code\Git\theme\ThemeOne.Infrastructure\bin\Debug\ThemeOne.Infrastructure.dll
+E:\Code\Git\theme\ThemeOne.Infrastructure\bin\Debug\ThemeOne.Infrastructure.pdb
+E:\Code\Git\theme\ThemeOne.Infrastructure\bin\Debug\SqlSugar.dll
+E:\Code\Git\theme\ThemeOne.Infrastructure\bin\Debug\SyntacticSugar.dll
+E:\Code\Git\theme\ThemeOne.Infrastructure\bin\Debug\ThemeOne.Entities.dll
+E:\Code\Git\theme\ThemeOne.Infrastructure\bin\Debug\ThemeOne.Entities.pdb
+E:\Code\Git\theme\ThemeOne.Infrastructure\bin\Debug\SyntacticSugar.pdb
+E:\Code\Git\theme\ThemeOne.Infrastructure\obj\Debug\ThemeOne.Infrastructure.csprojResolveAssemblyReference.cache
+E:\Code\Git\theme\ThemeOne.Infrastructure\obj\Debug\ThemeOne.Infrastructure.dll
+E:\Code\Git\theme\ThemeOne.Infrastructure\obj\Debug\ThemeOne.Infrastructure.pdb

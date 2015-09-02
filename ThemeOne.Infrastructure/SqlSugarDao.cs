@@ -14,7 +14,7 @@ namespace ThemeOne.Infrastructure
       }
       public static SqlSugarClient GetInstance()
       {
-          string connection = "Server=.;uid=sa;pwd=sasa;database=ThemeOne"; //这里可以动态根据cookies或session实现多库切换
+          string connection = @"Server=DESKTOP-RHDNF4S\SKX;uid=sa;pwd=sasa;database=ThemeOne"; //这里可以动态根据cookies或session实现多库切换
           return new SqlSugarClient(connection);
       }
     }

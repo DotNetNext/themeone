@@ -18,6 +18,7 @@ namespace ThemeOne.Areas.Admin.Controllers.ListApp.Domain
         public static GridConfig GetGridConfig()
         {
             var gc = new GridConfig();
+            gc.filterMode = FileModel.advanced;
             gc.gridbuttons = new List<GridButton>()
             {
                new GridButton(){ click="new $page().gridMethod.add", name="addbutton", icon="jqx-icon-plus", title="添加"},
