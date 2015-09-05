@@ -9,16 +9,24 @@ namespace ThemeOne.Areas.Admin.Controllers.ListApp.Domain
 {
     public class GirdModel
     {
+        /// <summary>
+        /// grid数据设置
+        /// </summary>
+        /// <returns></returns>
         public static GridDataAdapterSource GetDataAdapterSource()
         {
             var adp = new GridDataAdapterSource();
-            adp.url = "/admin/list/listsource";
+            adp.url = "/admin/list/GetListSource";//数据源地址
             return adp;
         }
+        /// <summary>
+        /// grid参数设置
+        /// </summary>
+        /// <returns></returns>
         public static GridConfig GetGridConfig()
         {
             var gc = new GridConfig();
-            gc.filterMode = FileModel.advanced;
+            gc.filterMode = FileModel.advanced;//高级筛选模式
             gc.gridbuttons = new List<GridButton>()
             {
                new GridButton(){ click="new $page().gridMethod.add", name="addbutton", icon="jqx-icon-plus", title="添加"},

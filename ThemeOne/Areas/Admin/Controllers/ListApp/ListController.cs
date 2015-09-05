@@ -55,7 +55,7 @@ namespace ThemeOne.Areas.Admin.Controllers.ListApp
         }
 
 
-        public JsonResult ListSource(GridSearchParams pars)
+        public JsonResult GetListSource(GridSearchParams pars)
         {
 
             using (ListService ls = new ListService())

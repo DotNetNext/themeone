@@ -83,9 +83,6 @@ function jqxWindow(selector, title, width, height) {
 }
 
 
-
-
-
 function jqxDelete(options) {
     var gridSelector = options.gridSelector;
     var url = options.url;
@@ -219,7 +216,7 @@ var jqxLocalization =
     pagernextbuttonstring: "下一页",
     pagerfirstbuttonstring: "首页",
     pagerlastbuttonstring: "最后一页",
-    filterapplystring: "过滤",
+    filterapplystring: "确定",
     filtercancelstring: "隐藏",
     filterclearstring: "清除",
     filterstring: "高级筛选",
