@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\DateInputApp\DateInputController.cs" />
     <Compile Include="Areas\Admin\Controllers\ListApp\Domain\GirdModel.cs" />
     <Compile Include="Areas\Admin\Controllers\ListApp\ListController.cs" />
     <Compile Include="Areas\Area1\Area1AreaRegistration.cs" />
@@ -100,6 +101,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Admin\Views\_css\list.css" />
+    <Content Include="Areas\Admin\Views\_js\dateInput.js" />
     <Content Include="Areas\Admin\Views\_js\list.js" />
     <Content Include="Areas\Area1\Views\_cs\test.css" />
     <Content Include="BuilderClass.aspx" />
@@ -942,6 +944,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Areas\Admin\Controllers\DateInputApp\Domain\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Areas\Area1\Controllers\" />
@@ -967,6 +970,7 @@
     <Content Include="Areas\Admin\Views\Web.config" />
     <Content Include="Views\User\Login.cshtml" />
     <Content Include="Areas\Admin\Views\List\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\DateInput\Index.cshtml" />
     <None Include="_demo\theme\assets\avatars\Thumbs.db" />
     <None Include="_demo\theme\assets\css\images\Thumbs.db" />
     <None Include="_demo\theme\assets\font\fontawesome-webfont.woff" />

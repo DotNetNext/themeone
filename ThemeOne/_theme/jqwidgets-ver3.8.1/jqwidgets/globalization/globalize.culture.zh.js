@@ -45,8 +45,8 @@ Globalize.addCultureInfo( "zh", "default", {
 	calendars: {
 		standard: {
 			days: {
-				names: ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"],
-				namesAbbr: ["周日","周一","周二","周三","周四","周五","周六"],
+			    names: ["日", "一", "二", "三", "四", "五", "六"],
+				namesAbbr: ["日", "一", "二", "三", "四", "五", "六"],
 				namesShort: ["日","一","二","三","四","五","六"]
 			},
 			months: {
@@ -57,7 +57,7 @@ Globalize.addCultureInfo( "zh", "default", {
 			PM: ["下午","下午","下午"],
 			eras: [{"name":"公元","start":null,"offset":0}],
 			patterns: {
-				d: "yyyy/M/d",
+				d: "yyyy-MM-dd",
 				D: "yyyy'年'M'月'd'日'",
 				t: "H:mm",
 				T: "H:mm:ss",

@@ -48,7 +48,7 @@ var $page = function () {
 
     //所有事件
     function addEvent() {
-        selector.$date().jqxDateTimeInput({ formatString: 'yyyy-MM-dd' });
+        selector.$date().jqxDateTimeInput({ formatString: 'd',culture:"zh" });
         //绑定验证事件
         selector.$form().jqxValidator({
             rules: [
