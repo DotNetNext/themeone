@@ -27,18 +27,8 @@ namespace ThemeOne.Models.Filters
                         fileStream.Read(fileBuffer, 0, (int)fileSize);
                         //如果不写fileStream.Close()语句，用户在下载过程中选择取消，将不能再次下载
                         fileStream.Close();
-                        if (FileSugar.GetExtension(filePath) == ".css")
-                        {
-                            context.Response.ContentType = "text/css";
-                        }
-                        else if (FileSugar.GetExtension(filePath) == ".js")
-                        {
-                            context.Response.ContentType = "text/js";
-                        }
-                        else
-                        {
-                            context.Response.ContentType = "application/octet-stream";
-                        }
+                        var fileExtension=FileSugar.GetExtension(filePath);
+                        context.Response.ContentType = fileExtension.Switch().Case(".css","text/css").Case(".js","text/js").Default("application/octet-stream").Break();
                         context.Response.AppendHeader("Content-Disposition", "attachment;filename=" + FileSugar.GetFileName(filePath));
                         context.Response.AddHeader("Content-Length", fileSize.ToString());
                         context.Response.BinaryWrite(fileBuffer);

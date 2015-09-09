@@ -6,3 +6,4 @@ E:\Code\Git\theme\ThemeOne.Entities\bin\Debug\ThemeOne.Entities.dll
 E:\Code\Git\theme\ThemeOne.Entities\bin\Debug\ThemeOne.Entities.pdb
 E:\Code\Git\theme\ThemeOne.Entities\obj\Debug\ThemeOne.Entities.dll
 E:\Code\Git\theme\ThemeOne.Entities\obj\Debug\ThemeOne.Entities.pdb
+E:\Code\Git\theme\ThemeOne.Entities\obj\Debug\ThemeOne.Entities.csprojResolveAssemblyReference.cache
