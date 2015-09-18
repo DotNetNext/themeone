@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "自定义单完格";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section js{
+    <script src="/areas/griddemo/views/_js/custom_cell.js" type="text/javascript"></script>
+    @Html.Raw(ViewBag.Grid)
+}
+<div id="grid">
+</div>

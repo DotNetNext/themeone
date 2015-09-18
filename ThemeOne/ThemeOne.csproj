@@ -81,6 +81,8 @@
     <Compile Include="Areas\GridDemo\Controllers\CheckboxApp\Domian\CheckboxModel.cs" />
     <Compile Include="Areas\GridDemo\Controllers\ColumnsHierachiesApp\ColumnsHierarchiesController.cs" />
     <Compile Include="Areas\GridDemo\Controllers\ColumnsHierachiesApp\Domain\ColHieModel.cs" />
+    <Compile Include="Areas\GridDemo\Controllers\CustomCellApp\CustomCellController.cs" />
+    <Compile Include="Areas\GridDemo\Controllers\CustomCellApp\Domain\CustomCellGridModel.cs" />
     <Compile Include="Areas\GridDemo\Controllers\DefaultApp\DefaultController.cs" />
     <Compile Include="Areas\GridDemo\Controllers\DefaultApp\Domain\DefaultGridModel.cs" />
     <Compile Include="Areas\GridDemo\Controllers\LockApp\Domain\LockGridModel.cs" />
@@ -111,6 +113,7 @@
     <Content Include="Areas\FormControl\Views\_js\upload_file.js" />
     <Content Include="Areas\GridDemo\Views\_js\checkbox.js" />
     <Content Include="Areas\GridDemo\Views\_js\columns_hierarchies.js" />
+    <Content Include="Areas\GridDemo\Views\_js\custom_cell.js" />
     <Content Include="Areas\GridDemo\Views\_js\default.js" />
     <Content Include="Areas\GridDemo\Views\_js\master_detail.js" />
     <Content Include="BuilderClass.aspx" />
@@ -978,6 +981,7 @@
     <Content Include="Areas\GridDemo\Views\ColumnsHierarchies\Index.cshtml" />
     <Content Include="Areas\GridDemo\Views\MasterDetail\Index.cshtml" />
     <Content Include="Areas\GridDemo\Views\Lock\Index.cshtml" />
+    <Content Include="Areas\GridDemo\Views\CustomCell\Index.cshtml" />
     <None Include="_demo\theme\assets\avatars\Thumbs.db" />
     <None Include="_demo\theme\assets\css\images\Thumbs.db" />
     <None Include="_demo\theme\assets\font\fontawesome-webfont.woff" />
