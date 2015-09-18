@@ -15,7 +15,7 @@ namespace ThemeOne.Areas.GridDemo.Controllers.CustomCellApp
         public static GridDataAdapterSource GetDataAdapterSource()
         {
             var adp = new GridDataAdapterSource();
-            adp.url = "/griddemo/default/GetListSource";//数据源地址
+            adp.url = "/griddemo/CustomCell/GetListSource";//数据源地址
             return adp;
         }
         /// <summary>
