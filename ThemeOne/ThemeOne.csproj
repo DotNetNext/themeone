@@ -102,7 +102,8 @@
   <ItemGroup>
     <Content Include="Areas\Admin\Views\_css\list.css" />
     <Content Include="Areas\Admin\Views\_js\dateInput.js" />
-    <Content Include="Areas\Admin\Views\_js\list.js" />
+    <Content Include="Areas\Admin\Views\_js\index.js" />
+    <Content Include="Areas\Admin\Views\_js\index_delete_range.js" />
     <Content Include="Areas\Area1\Views\_cs\test.css" />
     <Content Include="BuilderClass.aspx" />
     <Content Include="Views\_js\demo.js" />
@@ -234,7 +235,9 @@
     <Content Include="_demo\theme\说明.htm" />
     <Content Include="_lib\JQWidgetsSugar.dll" />
     <Content Include="_lib\JQWidgetsSugar.pdb" />
+    <Content Include="_lib\JQWidgetsSugar.XML" />
     <Content Include="_lib\SqlSugar.dll" />
+    <Content Include="_lib\SqlSugar.pdb" />
     <Content Include="_lib\SyntacticSugar.dll" />
     <Content Include="_lib\SyntacticSugar.pdb" />
     <Content Include="_theme\avatars\avatar.png" />
@@ -971,6 +974,7 @@
     <Content Include="Views\User\Login.cshtml" />
     <Content Include="Areas\Admin\Views\List\Index.cshtml" />
     <Content Include="Areas\Admin\Views\DateInput\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\List\Index_DeleteRange.cshtml" />
     <None Include="_demo\theme\assets\avatars\Thumbs.db" />
     <None Include="_demo\theme\assets\css\images\Thumbs.db" />
     <None Include="_demo\theme\assets\font\fontawesome-webfont.woff" />

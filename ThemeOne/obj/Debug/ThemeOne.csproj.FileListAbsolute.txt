@@ -30,3 +30,5 @@ E:\Code\Git\theme\ThemeOne\bin\SyntacticSugar.pdb
 E:\Code\Git\theme\ThemeOne\obj\Debug\ThemeOne.csprojResolveAssemblyReference.cache
 E:\Code\Git\theme\ThemeOne\obj\Debug\ThemeOne.dll
 E:\Code\Git\theme\ThemeOne\obj\Debug\ThemeOne.pdb
+E:\Code\Git\theme\ThemeOne\bin\JQWidgetsSugar.xml
+E:\Code\Git\theme\ThemeOne\bin\SqlSugar.pdb

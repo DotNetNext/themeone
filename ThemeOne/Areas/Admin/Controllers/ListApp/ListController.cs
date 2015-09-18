@@ -18,6 +18,11 @@ namespace ThemeOne.Areas.Admin.Controllers.ListApp
             ViewBag.Grid = JQXGrid.BindGrid("#grid", GirdModel.GetDataAdapterSource(), GirdModel.GetGridConfig());
             return View();
         }
+        public ActionResult Index_DeleteRange()
+        {
+            ViewBag.Grid = JQXGrid.BindGrid("#grid", GirdModel.GetDataAdapterSource(), GirdModel.GetDelteRangeGridConfig());
+            return View();
+        }
 
         [HttpPost]
         public JsonResult Add(list list)
@@ -53,7 +58,17 @@ namespace ThemeOne.Areas.Admin.Controllers.ListApp
                 return Json(model);
             }
         }
-
+        [HttpPost]
+        public JsonResult DelRange(int [] ids)
+        {
+            using (ListService ls = new ListService())
+            {
+                ActionResultModel<string> model = new ActionResultModel<string>();
+                model.isSuccess = ls.DeleteRange(ids);
+                model.respnseInfo = model.isSuccess ? "删除成功" : "删除失败";
+                return Json(model);
+            }
+        }
 
         public JsonResult GetListSource(GridSearchParams pars)
         {

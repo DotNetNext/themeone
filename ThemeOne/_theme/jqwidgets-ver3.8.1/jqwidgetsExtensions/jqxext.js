@@ -92,11 +92,15 @@ function jqxDelete(options) {
             type: "post",
             url: url,
             data: data,
+            traditional: true,
             dataType: "json",
             success: function (msg) {
                 if (msg.isSuccess == false) {
                     jqxAlert(msg.respnseInfo);
+
                 }
+                if ($(gridSelector).find(".jqx_datatable_checkbox_all").size() > 0)
+                    $(gridSelector).find(".jqx_datatable_checkbox_all").jqxCheckBox('checked', false);
                 $(gridSelector).jqxDataTable('updateBoundData');
             }, error: function (msg) {
                 console.log(msg);
@@ -104,7 +108,6 @@ function jqxDelete(options) {
         })
     }, "您确定要删除吗？")
 }
-
 
 
 function jqxSubmit(options) {

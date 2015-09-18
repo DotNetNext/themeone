@@ -32,6 +32,10 @@ namespace ThemeOne.Infrastructure
         {
             return db.Delete<list>(id);
         }
+        public bool DeleteRange(int [] ids)
+        {
+            return db.Delete<list>(ids);
+        }
 
         public void Dispose()
         {
