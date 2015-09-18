@@ -85,6 +85,7 @@
     <Compile Include="Areas\GridDemo\Controllers\DefaultApp\Domain\DefaultGridModel.cs" />
     <Compile Include="Areas\GridDemo\Controllers\LockApp\Domain\LockGridModel.cs" />
     <Compile Include="Areas\GridDemo\Controllers\LockApp\LockController.cs" />
+    <Compile Include="Areas\GridDemo\Controllers\MasterDetailApp\Domain\MasterDetailGrid.cs" />
     <Compile Include="Areas\GridDemo\Controllers\MasterDetailApp\MasterDetailController.cs" />
     <Compile Include="Areas\GridDemo\GridDemoAreaRegistration.cs" />
     <Compile Include="BuilderClass.aspx.cs">
@@ -111,6 +112,7 @@
     <Content Include="Areas\GridDemo\Views\_js\checkbox.js" />
     <Content Include="Areas\GridDemo\Views\_js\columns_hierarchies.js" />
     <Content Include="Areas\GridDemo\Views\_js\default.js" />
+    <Content Include="Areas\GridDemo\Views\_js\master_detail.js" />
     <Content Include="BuilderClass.aspx" />
     <Content Include="Views\_js\demo.js" />
     <Content Include="Views\_js\login.js" />
@@ -956,7 +958,6 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Views\_js\" />
     <Folder Include="Areas\FormControl\Views\_upload\" />
-    <Folder Include="Areas\GridDemo\Controllers\MasterDetailApp\Domain\" />
     <Folder Include="Areas\GridDemo\Views\_css\" />
     <Folder Include="Areas\GridDemo\Views\_img\" />
     <Folder Include="Controllers\HomeApp\Domain\" />
