@@ -20,3 +20,5 @@ E:\Code\Git\theme\ThemeOne.Infrastructure\obj\Debug\ThemeOne.Infrastructure.dll
 E:\Code\Git\theme\ThemeOne.Infrastructure\obj\Debug\ThemeOne.Infrastructure.pdb
 E:\Code\Git\theme\ThemeOne.Infrastructure\bin\Debug\SqlSugar.pdb
 E:\Code\Git\theme\ThemeOne.Infrastructure\bin\Debug\SyntacticSugar.xml
+F:\OneDrive\Asp.net\学习DEMO\ThemeOne\ThemeOne.Infrastructure\bin\Debug\SqlSugar.pdb
+F:\OneDrive\Asp.net\学习DEMO\ThemeOne\ThemeOne.Infrastructure\bin\Debug\SyntacticSugar.xml

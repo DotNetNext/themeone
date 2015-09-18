@@ -1,0 +1,9 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section js{
+    <script src="/ares/formcontrol/views/_js/columns_hierarchies.js" type="text/javascript"></script>
+     @Html.Raw(ViewBag.Grid)
+}
+<div id="grid"></div>

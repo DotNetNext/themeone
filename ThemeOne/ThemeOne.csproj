@@ -74,12 +74,17 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
-    <Compile Include="Areas\Admin\Controllers\DateInputApp\DateInputController.cs" />
-    <Compile Include="Areas\Admin\Controllers\ListApp\Domain\GirdModel.cs" />
-    <Compile Include="Areas\Admin\Controllers\ListApp\ListController.cs" />
-    <Compile Include="Areas\Area1\Area1AreaRegistration.cs" />
-    <Compile Include="Areas\Area2\Area2AreaRegistration.cs" />
+    <Compile Include="Areas\FormControl\Controllers\InputApp\InputDateController.cs" />
+    <Compile Include="Areas\FormControl\Controllers\UploadFileApp\UploadFileController.cs" />
+    <Compile Include="Areas\FormControl\FormControlAreaRegistration.cs" />
+    <Compile Include="Areas\GridDemo\Controllers\CheckboxApp\CheckboxController.cs" />
+    <Compile Include="Areas\GridDemo\Controllers\CheckboxApp\Domian\CheckboxModel.cs" />
+    <Compile Include="Areas\GridDemo\Controllers\ColumnsHierachiesApp\ColumnsHierarchiesController.cs" />
+    <Compile Include="Areas\GridDemo\Controllers\ColumnsHierachiesApp\Domain\ColHieModel.cs" />
+    <Compile Include="Areas\GridDemo\Controllers\DefaultApp\DefaultController.cs" />
+    <Compile Include="Areas\GridDemo\Controllers\DefaultApp\Domain\DefaultGridModel.cs" />
+    <Compile Include="Areas\GridDemo\Controllers\MasterDetailApp\MasterDetailController.cs" />
+    <Compile Include="Areas\GridDemo\GridDemoAreaRegistration.cs" />
     <Compile Include="BuilderClass.aspx.cs">
       <DependentUpon>BuilderClass.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -87,8 +92,6 @@
     <Compile Include="BuilderClass.aspx.designer.cs">
       <DependentUpon>BuilderClass.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\ErrorApp\ErrorController.cs" />
-    <Compile Include="Controllers\FileApp\FileController.cs" />
     <Compile Include="Controllers\HomeApp\HomeController.cs" />
     <Compile Include="Controllers\UserApp\Domain\UserDomain.cs" />
     <Compile Include="Controllers\UserApp\UserController.cs" />
@@ -101,11 +104,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Admin\Views\_css\list.css" />
-    <Content Include="Areas\Admin\Views\_js\dateInput.js" />
-    <Content Include="Areas\Admin\Views\_js\index.js" />
-    <Content Include="Areas\Admin\Views\_js\index_delete_range.js" />
-    <Content Include="Areas\Area1\Views\_cs\test.css" />
+    <Content Include="Areas\FormControl\Views\_js\input_date.js" />
+    <Content Include="Areas\FormControl\Views\_js\upload_file.js" />
+    <Content Include="Areas\GridDemo\Views\_js\checkbox.js" />
+    <Content Include="Areas\GridDemo\Views\_js\columns_hierarchies.js" />
+    <Content Include="Areas\GridDemo\Views\_js\default.js" />
     <Content Include="BuilderClass.aspx" />
     <Content Include="Views\_js\demo.js" />
     <Content Include="Views\_js\file_index.js" />
@@ -950,36 +953,29 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Areas\Admin\Controllers\DateInputApp\Domain\" />
-    <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Areas\Admin\Views\Shared\" />
-    <Folder Include="Areas\Area1\Controllers\" />
-    <Folder Include="Areas\Area1\Models\" />
-    <Folder Include="Areas\Area1\Views\Shared\" />
-    <Folder Include="Areas\Area1\Views\_js\" />
-    <Folder Include="Areas\Area2\Controllers\" />
-    <Folder Include="Areas\Area2\Models\" />
-    <Folder Include="Areas\Area2\Views\Shared\" />
-    <Folder Include="Areas\Area2\Views\_css\" />
-    <Folder Include="Areas\Area2\Views\_js\" />
-    <Folder Include="Controllers\ErrorApp\Domain\" />
+    <Folder Include="Areas\Admin\Views\_js\" />
+    <Folder Include="Areas\FormControl\Views\_upload\" />
+    <Folder Include="Areas\GridDemo\Controllers\MasterDetailApp\Domain\" />
+    <Folder Include="Areas\GridDemo\Views\_css\" />
+    <Folder Include="Areas\GridDemo\Views\_img\" />
     <Folder Include="Controllers\HomeApp\Domain\" />
     <Folder Include="Views\_img\" />
-    <Folder Include="Views\_upload\temp\" />
     <Folder Include="_theme\login\js\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Area1\Views\Web.config" />
-    <Content Include="Areas\Area2\Views\Web.config" />
-    <Content Include="Areas\Admin\Views\Web.config" />
     <Content Include="Views\User\Login.cshtml" />
-    <Content Include="Areas\Admin\Views\List\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\DateInput\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\List\Index_DeleteRange.cshtml" />
     <Content Include="Views\File\Index.cshtml" />
+    <Content Include="Areas\GridDemo\Views\Web.config" />
+    <Content Include="Areas\GridDemo\Views\Default\Index.cshtml" />
+    <Content Include="Areas\GridDemo\Views\Checkbox\Index.cshtml" />
+    <Content Include="Areas\FormControl\Views\Web.config" />
+    <Content Include="Areas\FormControl\Views\UploadFile\Index.cshtml" />
+    <Content Include="Areas\FormControl\Views\InputDate\Index.cshtml" />
+    <Content Include="Areas\GridDemo\Views\ColumnsHierarchies\Index.cshtml" />
+    <Content Include="Areas\GridDemo\Views\MasterDetail\Index.cshtml" />
     <None Include="_demo\theme\assets\avatars\Thumbs.db" />
     <None Include="_demo\theme\assets\css\images\Thumbs.db" />
     <None Include="_demo\theme\assets\font\fontawesome-webfont.woff" />

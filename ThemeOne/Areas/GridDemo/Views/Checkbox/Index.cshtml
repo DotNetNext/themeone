@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "多选框";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section pagehead{
+    <h1>
+        列表 <small><i class="icon-double-angle-right"></i>查看 </small>
+    </h1>
+}
+@section breadcrumb{
+    <li><i class="icon-home home-icon"></i><a href="#">管理</a> </li>
+    <li class="active">列表</li>
+}
+@section js{
+    <script src="/areas/griddemo/views/_js/checkbox.js" type="text/javascript"></script>
+    @Html.Raw(ViewBag.Grid)
+}
+@section css{
+    
+}
+<div id="grid">
+</div>
+<div id="editbox" class="hide">
+    <div class="savetable">
+        <form id="frmtable" class="form">
+        <table style="table-layout: fixed; border-style: none;">
+            <tr>
+                <td align="right">
+                    名称:
+                </td>
+                <td align="left">
+                    <input id="id" name="id" type="hidden" value="0" />
+                    <input id="name" name="name" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    产品名:
+                </td>
+                <td align="left">
+                    <input id="productname" name="productname" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    数量:
+                </td>
+                <td align="left">
+                    <input id="quantity" name="quantity" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    时间:
+                </td>
+                <td align="left">
+                    <div id="date" name="date">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <br />
+                    <button id="save" type="button">
+                        保存</button>
+                    <button style="margin-left: 5px;" type="button" id="cancel">
+                        取消</button>
+                </td>
+            </tr>
+        </table>
+        </form>
+    </div>
+</div>
