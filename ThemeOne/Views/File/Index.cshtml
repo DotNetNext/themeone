@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section js{
+    <script>
+        $(document).ready(function () {
+            var imageTypes = ['.gif', '.jpg', '.png'];
+            var videoTypes = ['.wmv', '.mov', '.avi', '.divx', '.mpeg', '.mpg', '.m4p'];
+            $('#jqxFileUpload').jqxFileUpload({ width: 300, "uploadUrl": '/File/UploadImg', autoUpload: true, fileInputName: 'imgname' });
+
+            $('#jqxFileUpload').on('uploadEnd', function (event) {
+                var args = event.args;
+                var fileName = args.file;
+                var serverResponce = args.response;
+                $("img").attr("src", serverResponce)
+                $("#imgPath").val(serverResponce);
+            });
+        });
+    </script>
+}
+<div id="jqxFileUpload">
+</div>
+<img src="" />
+<input type="hidden" id="imgPath" name="imgPath" />

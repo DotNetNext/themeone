@@ -88,6 +88,7 @@
       <DependentUpon>BuilderClass.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controllers\ErrorApp\ErrorController.cs" />
+    <Compile Include="Controllers\FileApp\FileController.cs" />
     <Compile Include="Controllers\HomeApp\HomeController.cs" />
     <Compile Include="Controllers\UserApp\Domain\UserDomain.cs" />
     <Compile Include="Controllers\UserApp\UserController.cs" />
@@ -107,6 +108,7 @@
     <Content Include="Areas\Area1\Views\_cs\test.css" />
     <Content Include="BuilderClass.aspx" />
     <Content Include="Views\_js\demo.js" />
+    <Content Include="Views\_js\file_index.js" />
     <Content Include="Views\_js\login.js" />
     <Content Include="_demo\index.html" />
     <Content Include="_demo\theme\assets\avatars\avatar.png" />
@@ -962,6 +964,7 @@
     <Folder Include="Controllers\ErrorApp\Domain\" />
     <Folder Include="Controllers\HomeApp\Domain\" />
     <Folder Include="Views\_img\" />
+    <Folder Include="Views\_upload\temp\" />
     <Folder Include="_theme\login\js\" />
   </ItemGroup>
   <ItemGroup>
@@ -975,6 +978,7 @@
     <Content Include="Areas\Admin\Views\List\Index.cshtml" />
     <Content Include="Areas\Admin\Views\DateInput\Index.cshtml" />
     <Content Include="Areas\Admin\Views\List\Index_DeleteRange.cshtml" />
+    <Content Include="Views\File\Index.cshtml" />
     <None Include="_demo\theme\assets\avatars\Thumbs.db" />
     <None Include="_demo\theme\assets\css\images\Thumbs.db" />
     <None Include="_demo\theme\assets\font\fontawesome-webfont.woff" />
@@ -1037,7 +1041,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>11119</DevelopmentServerPort>
+          <DevelopmentServerPort>57565</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>
