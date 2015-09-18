@@ -134,6 +134,7 @@ function jqxSubmit(options) {
 
 }
 
+var jqxLocalizationUpload = { browseButton: ' 选择 ', uploadButton: '上传', cancelButton: '取消' };
 
 var jqxLocalization =
 

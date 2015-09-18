@@ -242,6 +242,7 @@
     <Content Include="_lib\SqlSugar.pdb" />
     <Content Include="_lib\SyntacticSugar.dll" />
     <Content Include="_lib\SyntacticSugar.pdb" />
+    <Content Include="_lib\SyntacticSugar.XML" />
     <Content Include="_theme\avatars\avatar.png" />
     <Content Include="_theme\avatars\avatar1.png" />
     <Content Include="_theme\avatars\avatar2.png" />

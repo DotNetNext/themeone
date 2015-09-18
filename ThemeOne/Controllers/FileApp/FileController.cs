@@ -16,14 +16,16 @@ namespace ThemeOne.Controllers
             return View();
         }
         [HttpPost]
-        public string UploadImg()
+        public JsonResult UploadImg()
         {
             UploadImage ui = new UploadImage();
-            string url = "/views/_upload/temp/{0}.jpg".ToFormat(Guid.NewGuid());
-            string savePath = Server.MapPath(url);
+            ui.SetAllowSize = 1;
+            ui.SetAllowFormat = ".jpeg|.jpg|.bmp|.gif|.png";
+            string url = "/views/_upload/temp/img/".ToFormat(Guid.NewGuid().ToString().Replace("-",""));
+            string saveFolder = Server.MapPath(url);
             HttpPostedFile file = System.Web.HttpContext.Current.Request.Files[0];
-            var reponseMessage = ui.FileSaveAs(file, savePath);
-            return reponseMessage.WebPath;
+            var reponseMessage = ui.FileSaveAs(file, saveFolder);
+            return Json(reponseMessage);
         }
 
     }
