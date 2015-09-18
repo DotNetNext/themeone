@@ -25,7 +25,7 @@ namespace ThemeOne.Areas.GridDemo.Controllers.ColumnsHierachiesApp
         public static GridConfig GetGridConfig()
         {
             var gc = new GridConfig();
-            gc.filterMode = FileModel.advanced;//高级筛选模式
+            gc.filterMode = FilterModel.advanced;//高级筛选模式
             gc.pageSize = 20;
             gc.width = "90%";
             gc.showToolbar = false;

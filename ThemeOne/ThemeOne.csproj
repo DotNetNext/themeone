@@ -83,6 +83,8 @@
     <Compile Include="Areas\GridDemo\Controllers\ColumnsHierachiesApp\Domain\ColHieModel.cs" />
     <Compile Include="Areas\GridDemo\Controllers\DefaultApp\DefaultController.cs" />
     <Compile Include="Areas\GridDemo\Controllers\DefaultApp\Domain\DefaultGridModel.cs" />
+    <Compile Include="Areas\GridDemo\Controllers\LockApp\Domain\LockGridModel.cs" />
+    <Compile Include="Areas\GridDemo\Controllers\LockApp\LockController.cs" />
     <Compile Include="Areas\GridDemo\Controllers\MasterDetailApp\MasterDetailController.cs" />
     <Compile Include="Areas\GridDemo\GridDemoAreaRegistration.cs" />
     <Compile Include="BuilderClass.aspx.cs">
@@ -111,7 +113,6 @@
     <Content Include="Areas\GridDemo\Views\_js\default.js" />
     <Content Include="BuilderClass.aspx" />
     <Content Include="Views\_js\demo.js" />
-    <Content Include="Views\_js\file_index.js" />
     <Content Include="Views\_js\login.js" />
     <Content Include="_demo\index.html" />
     <Content Include="_demo\theme\assets\avatars\avatar.png" />
@@ -967,7 +968,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\User\Login.cshtml" />
-    <Content Include="Views\File\Index.cshtml" />
     <Content Include="Areas\GridDemo\Views\Web.config" />
     <Content Include="Areas\GridDemo\Views\Default\Index.cshtml" />
     <Content Include="Areas\GridDemo\Views\Checkbox\Index.cshtml" />
@@ -976,6 +976,7 @@
     <Content Include="Areas\FormControl\Views\InputDate\Index.cshtml" />
     <Content Include="Areas\GridDemo\Views\ColumnsHierarchies\Index.cshtml" />
     <Content Include="Areas\GridDemo\Views\MasterDetail\Index.cshtml" />
+    <Content Include="Areas\GridDemo\Views\Lock\Index.cshtml" />
     <None Include="_demo\theme\assets\avatars\Thumbs.db" />
     <None Include="_demo\theme\assets\css\images\Thumbs.db" />
     <None Include="_demo\theme\assets\font\fontawesome-webfont.woff" />
