@@ -10,6 +10,9 @@ using ThemeOne.Entities;
 
 namespace ThemeOne.Areas.GridDemo.Controllers.MasterDetailApp
 {
+    /// <summary>
+    /// 二级表格
+    /// </summary>
     public class MasterDetailController : Controller
     {
 

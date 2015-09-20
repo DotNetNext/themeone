@@ -10,6 +10,9 @@ using ThemeOne.Entities;
 
 namespace ThemeOne.Areas.GridDemo.Controllers.ColumnsHierachiesApp
 {
+    /// <summary>
+    /// 多表头
+    /// </summary>
     public class ColumnsHierarchiesController : Controller
     {
         //

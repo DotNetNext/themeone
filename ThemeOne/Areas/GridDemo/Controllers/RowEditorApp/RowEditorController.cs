@@ -7,19 +7,18 @@ using JQWidgetsSugar;
 using ThemeOne.Infrastructure;
 using SqlSugar;
 using ThemeOne.Entities;
- 
 
-namespace ThemeOne.Areas.GridDemo.Controllers.LockApp
+namespace ThemeOne.Areas.GridDemo.Controllers.RowEditorApp
 {
     /// <summary>
-    /// 锁表头
+    ///行编辑
     /// </summary>
-    public class LockController : Controller
+    public class RowEditorController : Controller
     {
-       
+
         public ActionResult Index()
         {
-            ViewBag.Grid = JQXGrid.BindGrid("#grid", LockGridModel.GetDataAdapterSource(), LockGridModel.GetGridConfig());
+            ViewBag.Grid = JQXGrid.BindGrid("#grid", RowEditorGridModel.GetDataAdapterSource(), RowEditorGridModel.GetGridConfig());
             return View();
         }
         public JsonResult GetListSource(GridSearchParams pars)

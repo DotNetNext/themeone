@@ -11,6 +11,9 @@ using ThemeOne.Entities;
 
 namespace ThemeOne.Areas.GridDemo.Controllers.CustomCellApp
 {
+    /// <summary>
+    /// 自定义单格格式
+    /// </summary>
     public class CustomCellController : Controller
     {
         public ActionResult Index()

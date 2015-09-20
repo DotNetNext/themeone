@@ -89,6 +89,8 @@
     <Compile Include="Areas\GridDemo\Controllers\LockApp\LockController.cs" />
     <Compile Include="Areas\GridDemo\Controllers\MasterDetailApp\Domain\MasterDetailGrid.cs" />
     <Compile Include="Areas\GridDemo\Controllers\MasterDetailApp\MasterDetailController.cs" />
+    <Compile Include="Areas\GridDemo\Controllers\RowEditorApp\Domain\RowEditorGridModel.cs" />
+    <Compile Include="Areas\GridDemo\Controllers\RowEditorApp\RowEditorController.cs" />
     <Compile Include="Areas\GridDemo\GridDemoAreaRegistration.cs" />
     <Compile Include="BuilderClass.aspx.cs">
       <DependentUpon>BuilderClass.aspx</DependentUpon>
@@ -116,6 +118,7 @@
     <Content Include="Areas\GridDemo\Views\_js\custom_cell.js" />
     <Content Include="Areas\GridDemo\Views\_js\default.js" />
     <Content Include="Areas\GridDemo\Views\_js\master_detail.js" />
+    <Content Include="Areas\GridDemo\Views\_js\row_editor.js" />
     <Content Include="BuilderClass.aspx" />
     <Content Include="Views\_js\demo.js" />
     <Content Include="Views\_js\login.js" />
@@ -249,6 +252,7 @@
     <Content Include="_lib\JQWidgetsSugar.XML" />
     <Content Include="_lib\SqlSugar.dll" />
     <Content Include="_lib\SqlSugar.pdb" />
+    <Content Include="_lib\SqlSugar.XML" />
     <Content Include="_lib\SyntacticSugar.dll" />
     <Content Include="_lib\SyntacticSugar.pdb" />
     <Content Include="_lib\SyntacticSugar.XML" />
@@ -982,6 +986,7 @@
     <Content Include="Areas\GridDemo\Views\MasterDetail\Index.cshtml" />
     <Content Include="Areas\GridDemo\Views\Lock\Index.cshtml" />
     <Content Include="Areas\GridDemo\Views\CustomCell\Index.cshtml" />
+    <Content Include="Areas\GridDemo\Views\RowEditor\Index.cshtml" />
     <None Include="_demo\theme\assets\avatars\Thumbs.db" />
     <None Include="_demo\theme\assets\css\images\Thumbs.db" />
     <None Include="_demo\theme\assets\font\fontawesome-webfont.woff" />

@@ -6,3 +6,6 @@
 .savetable button{  cursor:pointer; padding:3px 9px}
 .savetable table{ margin:20px 10px}
  
+ 
+ .editor_input{ background:#F0E7E1; color:Black; border:0}
+ .jqx-datetimeinput input{ border:none}

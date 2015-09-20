@@ -10,6 +10,9 @@ using SqlSugar;
 
 namespace ThemeOne.Areas.GridDemo.Controllers.CheckboxApp
 {
+    /// <summary>
+    /// checkbox多选
+    /// </summary>
     public class CheckboxController : Controller
     {
         public ActionResult Index()
