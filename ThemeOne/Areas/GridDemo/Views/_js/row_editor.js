@@ -63,7 +63,7 @@
 
     //所有事件
     function addEvent() {
-        //绑定验证事件
+        //行编辑提交事件
         selector.$grid().on('rowEndEdit',
             function (event) {
                 // event args.
