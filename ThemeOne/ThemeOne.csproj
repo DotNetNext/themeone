@@ -109,6 +109,13 @@
     <Compile Include="Models\Filters\AuthorizeFilter.cs" />
     <Compile Include="Models\Filters\Global_Application_BeginRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebForm\GridView.aspx.cs">
+      <DependentUpon>GridView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\GridView.aspx.designer.cs">
+      <DependentUpon>GridView.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\FormControl\Views\_js\input_date.js" />
@@ -122,6 +129,7 @@
     <Content Include="BuilderClass.aspx" />
     <Content Include="Views\_js\demo.js" />
     <Content Include="Views\_js\login.js" />
+    <Content Include="WebForm\GridView.aspx" />
     <Content Include="_demo\index.html" />
     <Content Include="_demo\theme\assets\avatars\avatar.png" />
     <Content Include="_demo\theme\assets\avatars\avatar1.png" />
