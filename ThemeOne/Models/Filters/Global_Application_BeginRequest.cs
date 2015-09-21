@@ -20,7 +20,7 @@ namespace ThemeOne.Models.Filters
                 var isExistFile = FileSugar.IsExistFile(filePath);
                 if (isExistFile)
                 {
-                    using (FileStream fileStream = new FileStream(filePath, FileMode.Open))
+                    using (FileStream fileStream = new FileStream(filePath, FileMode.Open,FileAccess.Read))
                     {
                         long fileSize = fileStream.Length;
                         byte[] fileBuffer = new byte[fileSize];
