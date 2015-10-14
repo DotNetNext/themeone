@@ -273,6 +273,7 @@
     <Content Include="_theme\avatars\profile-pic.jpg" />
     <Content Include="_theme\avatars\user.jpg" />
     <Content Include="_theme\jqwidgets-ver3.8.1\jqwidgets\globalization\globalize.culture.zh.js" />
+    <Content Include="_theme\jqwidgets-ver3.8.1\jqwidgets\styles\images\stripes.png" />
     <Content Include="_theme\login2\css3-batman-login-form\css\reset.css" />
     <Content Include="_theme\login2\css3-batman-login-form\css\style.css" />
     <Content Include="_theme\login2\css3-batman-login-form\index.html" />
