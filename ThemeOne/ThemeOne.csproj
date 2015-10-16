@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Areas\FormControl\Controllers\InputApp\InputDateController.cs" />
+    <Compile Include="Areas\FormControl\Controllers\JqxComboxApp\JqxComboxController.cs" />
     <Compile Include="Areas\FormControl\Controllers\UploadFileApp\UploadFileController.cs" />
     <Compile Include="Areas\FormControl\FormControlAreaRegistration.cs" />
     <Compile Include="Areas\GridDemo\Controllers\CheckboxApp\CheckboxController.cs" />
@@ -119,6 +120,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\FormControl\Views\_js\input_date.js" />
+    <Content Include="Areas\FormControl\Views\_js\Jqxcombox.js" />
     <Content Include="Areas\FormControl\Views\_js\upload_file.js" />
     <Content Include="Areas\GridDemo\Views\_js\checkbox.js" />
     <Content Include="Areas\GridDemo\Views\_js\columns_hierarchies.js" />
@@ -996,6 +998,7 @@
     <Content Include="Areas\GridDemo\Views\Lock\Index.cshtml" />
     <Content Include="Areas\GridDemo\Views\CustomCell\Index.cshtml" />
     <Content Include="Areas\GridDemo\Views\RowEditor\Index.cshtml" />
+    <Content Include="Areas\FormControl\Views\JqxCombox\Index.cshtml" />
     <None Include="_demo\theme\assets\avatars\Thumbs.db" />
     <None Include="_demo\theme\assets\css\images\Thumbs.db" />
     <None Include="_demo\theme\assets\font\fontawesome-webfont.woff" />
