@@ -9,10 +9,16 @@ using SqlSugar;
 using SyntacticSugar;
 using JQWidgetsSugar;
 using ThemeOne.Controllers.UserApp.Domain;
-namespace ThemeOne.Controllers.UserApp
+namespace ThemeOne.Controllers
 {
     public class UserController : Controller
     {
+        UserDomain ud;
+        public UserController(UserDomain ud)
+        {
+            this.ud = ud;
+        }
+
         [HttpGet]
         public ActionResult Login(string return_url)
         {
@@ -24,7 +30,7 @@ namespace ThemeOne.Controllers.UserApp
         {
             var model = new JQWidgetsSugar.ActionResultModel<string>()
             {
-                isSuccess = UserDomain.LoginSubmit(user),
+                isSuccess = this.ud.LoginSubmit(user),
             };
             model.respnseInfo = model.isSuccess.IIF("操作成功！","用户名密码错误！");
             return Json(model);

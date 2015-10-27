@@ -5,6 +5,9 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using ThemeOne.Models.Filters;
+using Autofac;
+using Autofac.Integration.Mvc;
+using System.Reflection;
 
 namespace ThemeOne
 {
@@ -41,6 +44,16 @@ namespace ThemeOne
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
+
+
+            #region Autofac注入依赖
+            var builder = new ContainerBuilder();
+            builder.RegisterAssemblyTypes(Assembly.GetExecutingAssembly());//当前程序集
+            builder.RegisterAssemblyTypes(Assembly.Load("ThemeOne.Infrastructure"));//程序集ThemeOne.Infrastructure
+            
+            var container = builder.Build();
+            DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
+            #endregion
         }
     }
 }

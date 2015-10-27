@@ -6,9 +6,14 @@ using SqlSugar;
 using ThemeOne.Entities;
 namespace ThemeOne.Infrastructure
 {
-    public class ListService : IDisposable
+    public class ListService
     {
-        public SqlSugar.SqlSugarClient db = SugarDao.GetInstance();
+        public SqlSugarClient db;
+        public ListService(SugarDao sd)
+        {
+            this.db = sd.db;
+        }
+
         public Sqlable GetListSqlable()
         {
             Sqlable sable = db.Sqlable().Form<list>("g");//查询表的sqlable对象
@@ -32,19 +37,14 @@ namespace ThemeOne.Infrastructure
         {
             return db.Delete<list>(id);
         }
-        public bool DeleteRange(int [] ids)
+
+        public bool DeleteRange(int[] ids)
         {
             return db.Delete<list>(ids);
         }
 
-        public void Dispose()
-        {
-            if (db != null)
-            {
-                db.Dispose();
-            };
-        }
 
-     
+
+
     }
 }

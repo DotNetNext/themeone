@@ -34,6 +34,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=2.5.2.830, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_lib\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc, Version=2.5.2.830, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_lib\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll</HintPath>
     </Reference>
@@ -257,6 +265,8 @@
     <Content Include="_demo\theme\widgets.html" />
     <Content Include="_demo\theme\wysiwyg.html" />
     <Content Include="_demo\theme\说明.htm" />
+    <Content Include="_lib\Autofac.dll" />
+    <Content Include="_lib\Autofac.Integration.Mvc.dll" />
     <Content Include="_lib\JQWidgetsSugar.dll" />
     <Content Include="_lib\JQWidgetsSugar.pdb" />
     <Content Include="_lib\JQWidgetsSugar.XML" />

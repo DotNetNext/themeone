@@ -15,6 +15,11 @@ namespace ThemeOne.Areas.GridDemo.Controllers.CheckboxApp
     /// </summary>
     public class CheckboxController : Controller
     {
+        private ListService ls;
+        public CheckboxController(ListService ls)
+        {
+            this.ls = ls;
+        }
         public ActionResult Index()
         {
             ViewBag.Grid = JQXGrid.BindGrid("#grid", CheckboxGridModel.GetDataAdapterSource(), CheckboxGridModel.GetGridConfig());
@@ -24,44 +29,33 @@ namespace ThemeOne.Areas.GridDemo.Controllers.CheckboxApp
         [HttpPost]
         public JsonResult Add(list list)
         {
-            using (ListService ls = new ListService())
-            {
-                ActionResultModel<string> model = new ActionResultModel<string>();
-                model.isSuccess = ls.Save(list);
-                model.respnseInfo = model.isSuccess ? "添加成功" : "添加失败";
-                return Json(model);
-            }
+            ActionResultModel<string> model = new ActionResultModel<string>();
+            model.isSuccess = ls.Save(list);
+            model.respnseInfo = model.isSuccess ? "添加成功" : "添加失败";
+            return Json(model);
         }
         [HttpPost]
         public JsonResult Edit(list list)
         {
-            using (ListService ls = new ListService())
-            {
-                ActionResultModel<string> model = new ActionResultModel<string>();
-                model.isSuccess = ls.Save(list);
-                model.respnseInfo = model.isSuccess ? "编辑成功" : "编辑失败";
 
-                return Json(model);
-            }
+            ActionResultModel<string> model = new ActionResultModel<string>();
+            model.isSuccess = ls.Save(list);
+            model.respnseInfo = model.isSuccess ? "编辑成功" : "编辑失败";
+
+            return Json(model);
         }
 
         [HttpPost]
         public JsonResult DelRange(int[] ids)
         {
-            using (ListService ls = new ListService())
-            {
-                ActionResultModel<string> model = new ActionResultModel<string>();
-                model.isSuccess = ls.DeleteRange(ids);
-                model.respnseInfo = model.isSuccess ? "删除成功" : "删除失败";
-                return Json(model);
-            }
+            ActionResultModel<string> model = new ActionResultModel<string>();
+            model.isSuccess = ls.DeleteRange(ids);
+            model.respnseInfo = model.isSuccess ? "删除成功" : "删除失败";
+            return Json(model);
         }
 
         public JsonResult GetListSource(GridSearchParams pars)
         {
-
-            ListService ls = new ListService();
-
             if (pars.sortdatafield == null)
             { //默认按id降序
                 pars.sortdatafield = "id";

@@ -15,8 +15,11 @@ namespace ThemeOne.Areas.GridDemo.Controllers.ColumnsHierachiesApp
     /// </summary>
     public class ColumnsHierarchiesController : Controller
     {
-        //
-        // GET: /GridDemo/ColumnsHierarchies/
+        ListService ls;
+        public ColumnsHierarchiesController(ListService ls)
+        {
+            this.ls = ls;
+        }
 
         public ActionResult Index()
         {
@@ -26,17 +29,14 @@ namespace ThemeOne.Areas.GridDemo.Controllers.ColumnsHierachiesApp
         public JsonResult GetListSource(GridSearchParams pars)
         {
 
-            using (ListService ls = new ListService())
-            {
-                if (pars.sortdatafield == null)
-                { //默认按id降序
-                    pars.sortdatafield = "id";
-                    pars.sortorder = "desc";
-                }
-                Sqlable sable = ls.GetListSqlable();
-                var model = JQXGrid.GetWidgetsSource<list>(sable, pars, "*");//根据grid的参数自动查询
-                return Json(model, JsonRequestBehavior.AllowGet);
+            if (pars.sortdatafield == null)
+            { //默认按id降序
+                pars.sortdatafield = "id";
+                pars.sortorder = "desc";
             }
+            Sqlable sable = ls.GetListSqlable();
+            var model = JQXGrid.GetWidgetsSource<list>(sable, pars, "*");//根据grid的参数自动查询
+            return Json(model, JsonRequestBehavior.AllowGet);
         }
     }
 }

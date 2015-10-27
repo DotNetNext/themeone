@@ -38,3 +38,5 @@ F:\OneDrive\Asp.net\学习DEMO\ThemeOne\ThemeOne\bin\SqlSugar.pdb
 F:\OneDrive\Asp.net\学习DEMO\ThemeOne\ThemeOne\bin\SyntacticSugar.xml
 F:\OneDrive\Asp.net\学习DEMO\ThemeOne\ThemeOne\bin\SqlSugar.xml
 E:\Code\Git\theme\ThemeOne\bin\SqlSugar.xml
+E:\Code\Git\theme\ThemeOne\bin\Autofac.dll
+E:\Code\Git\theme\ThemeOne\bin\Autofac.Integration.Mvc.dll

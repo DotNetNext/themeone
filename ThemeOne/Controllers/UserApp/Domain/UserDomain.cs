@@ -10,14 +10,17 @@ namespace ThemeOne.Controllers.UserApp.Domain
 {
     public class UserDomain
     {
-        public static bool LoginSubmit(user_info user)
+        UserInfoService us;
+        public UserDomain(UserInfoService us)
         {
-            using (UserInfoService us = new UserInfoService())
-            {
-                user.password = EncryptSugar.GetInstance().MD5(user.password);
-                var isLogin= us.Login(user.user_name, user.password);
-                return isLogin;
-            }
+            this.us = us;
+        }
+
+        public bool LoginSubmit(user_info user)
+        {
+            user.password = EncryptSugar.GetInstance().MD5(user.password);
+            var isLogin = us.Login(user.user_name, user.password);
+            return isLogin;
         }
     }
 }
