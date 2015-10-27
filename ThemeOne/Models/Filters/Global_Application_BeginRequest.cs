@@ -33,7 +33,6 @@ namespace ThemeOne.Models.Filters
                         context.Response.AddHeader("Content-Length", fileSize.ToString());
                         context.Response.BinaryWrite(fileBuffer);
                         context.Response.Flush();
-                        context.Response.Close();
                         context.Response.End();
                     }
                 }
