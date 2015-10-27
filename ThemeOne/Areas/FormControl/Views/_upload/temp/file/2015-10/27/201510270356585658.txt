@@ -1,0 +1,157 @@
+ALTER  view  [dbo].[v_REQ_Master]
+as
+with cte as (
+ select vguid,
+(select stuff((
+select
+','+h.Majorname 
+from
+(
+	select vguid,
+	major1=CONVERT(xml,'<root><v>'+REPLACE(left(major1,len(major1)-1),',','</v><v>')+'</v></root>')
+	from REQ_Master
+)A
+outer apply
+(
+	select vguid,
+	major1=v.value('.','varchar(1000)')
+	from A.major1.nodes('/root/v')(v)
+)B
+left join COM_Major h on b.major1=h.vguid
+where b.vguid=g.vguid
+for xml path('')),1,1,''))as Majorname
+from REQ_Master g
+
+)
+SELECT   
+	e.Majorname,
+	b.BUName, 
+	c.DIVIName, 
+	d.DeptName, 
+	a.EntityID,
+	a.RequisitionID,
+	dbo.fn_DepartName(a.JobID,2) as RequisitionTitle,
+	a.Academic,
+	a.Gender,
+	a.WorkExperience,
+	a.AgeRange,
+	a.WorkPlace,
+	a.BUGUID,
+	a.DIVIGUID,
+	a.DeptVGUID,
+	a.JobID,
+	a.JobName,
+	a.JobName AS PositionName,
+	a.Inhiring,
+	a.AnnualSalary,
+	a.SalaryRange,
+	a.Location,
+	a.RequisitionOwner,
+	a.RequisitionRecruiter,
+	a.ApprovalTime,
+	a.ApprovalRemarks,
+	a.RequisitionStatus,
+	a.VGUID,
+	a.Creator,
+	a.CreateTime,
+	a.Modifier,
+	a.ModifiedTime,
+	a.RequisitionApprove,
+	a.ReqReason,
+	a.IsTaghot,
+	a.IsPublicposi,
+	a.PreScreenAss,
+	a.PreScreenVideo,
+	a.Reminder,
+	a.ApprovalNoPassReason,
+	a.IsbackgroundInvestigation,
+	a.PreferredSource1,
+	a.PreferredSource2,
+	a.Property,
+	a.Responsibility,
+	a.Qualification,
+	a.StartTime,
+	a.MaritalStatus,
+	a.ExpectToKangr,
+	a.Period,
+	a.CensusRegister,
+	a.Experience,
+	a.Skill,
+	a.Proposer,
+	a.Major1,
+	a.Major2,
+	a.Major3,
+	a.IsRecommend,
+	a.PauseOriginalStatus,
+	a.JobKeyWord,
+	a.Travel,
+	a.PeopleMgmt,
+	a.HouseholdLimitedType,
+	a.ExpectsTheCompany,
+	a.OtherRequirements,
+	a.WorkProvince,
+	a.CreatorVGUID,
+	a.ModifierVGUID,
+	a.SubmissionDate,
+	a.DateOfApproval,
+	a.ReleaseDate,
+	a.LastTelephoneScreeningDate,
+	a.LastInterviewDate,
+	a.PosGrade,
+	a.CloseTime,
+	a.Entityframework_id,
+	a.OtherWelfare,
+	a.EndTime,
+	a.Cities,
+	a.CitiesText,
+	f.ProvinceId,
+	aa.desc1 as descAcademic,bb.desc1 as descMaritalStatus,cc.desc1 as descgender,
+	dd.desc1 as descWorkExperience,ee.desc1 as descAgeRange,ff.desc1 as descLocation,
+	gg.desc1 as descSalaryRange,hh.desc1 as descProperty,ww.desc1 as descReqReason,
+	jj.desc1 as descApprovalNoPassReason,ss.desc1 as descPeriod,xx.desc1 as descPreScreenAss,
+	zz.desc1 as descPreScreenVideo,mm.desc1 as descRequisitionStatus,'' as descCensusRegister,
+	hl.desc1 as descHouseholdLimitedType,
+	--vv.ProviceName descCensusRegisterProvice,qq.CityName as descCensusRegisterCity,
+	pp.UserName as descRequisitionOwner,oo.UserName as descRequisitionRecruiter,
+	rp.UserName as descRequisitionApprove,
+	rr.ProviceName as descWorkPlaceProvice,uu.CityName as descWorkPlaceCity,
+	aaa.desc1 as descTravel,bbb.UserName descProposer,
+	vc.vccount,
+	[index]=ROW_NUMBER() OVER (ORDER BY a.CreateTime desc)
+
+FROM      REQ_Master a 
+LEFT JOIN COM_Entity b ON a.BUGUID = b.vguid 
+LEFT JOIN COM_Division c ON a.DIVIGUID = c.vguid 
+LEFT JOIN COM_BU d ON a.DeptVGUID = d .vguid
+left join COM_City f on a.workPlace=f.Code
+left join cte e on a.vguid=e.vguid
+left join SYS_DataDictionaryDetail aa on aa.mastercode=a.Academic and aa.vguid='24602F23-A8ED-4BFE-B2E4-6BA8173B1900'
+left join SYS_DataDictionaryDetail bb on bb.mastercode=a.MaritalStatus and bb.vguid='4EF9CF88-65F9-4F30-A99B-80EDC95A8FCF'
+left join SYS_DataDictionaryDetail cc on cc.mastercode=a.Gender and cc.vguid='F7964F90-2DA6-4723-A762-A1AC77D4181E'
+left join SYS_DataDictionaryDetail dd on dd.mastercode=a.WorkExperience and dd.vguid='F88F46CB-404F-4129-B32E-1C4745B29836'
+left join SYS_DataDictionaryDetail ee on ee.mastercode=a.AgeRange and ee.vguid='53D39DCB-CD46-4740-B3D0-87912AB416EF'
+left join SYS_DataDictionaryDetail ff on ff.mastercode=a.Location and ff.vguid='E16D09F8-BFAB-4CC5-A730-51AA0B7D360B'
+left join SYS_DataDictionaryDetail gg on gg.mastercode=a.SalaryRange and gg.vguid='D5D72757-123D-4CE9-95AD-A82F6C6995EA'
+left join SYS_DataDictionaryDetail hh on hh.mastercode=a.Property and hh.vguid='0536EC27-D5BA-4D59-A6BE-B342FC6E44B2'
+left join SYS_DataDictionaryDetail ww on ww.mastercode=a.ReqReason and ww.vguid='697469F3-6B1E-4A4F-8BB9-101A6F1789C6'
+left join SYS_DataDictionaryDetail jj on jj.mastercode=a.ApprovalNoPassReason and jj.vguid='8411B5A4-09AD-440C-A964-E10A891641FB'
+left join SYS_DataDictionaryDetail ss on ss.mastercode=a.Period and ss.vguid='6eff94ae-9b45-4f11-b7fa-26139a80e189'
+left join SYS_DataDictionaryDetail xx on xx.mastercode=a.PreScreenAss and xx.vguid='24BDBA4B-97C8-44A6-9977-05C5735E1A61'
+left join SYS_DataDictionaryDetail zz on zz.mastercode=a.PreScreenVideo and zz.vguid='1CEB2DC9-E4C9-4048-B65C-906A841FD880'
+left join SYS_DataDictionaryDetail mm on mm.mastercode=a.RequisitionStatus and mm.vguid='A55032C1-40D8-46AF-9F1D-1F552E412EDF'
+left join SYS_DataDictionaryDetail hl on hl.mastercode=a.HouseholdLimitedType and hl.vguid='705AEAF1-9E69-444C-AEE2-69E85691625A'
+--»§¼®Ê¡ÊÐ
+--left join COM_City qq on a.CensusRegister=qq.Code
+--left join COM_Province vv on qq.ProvinceId=vv.code
+left join COM_City uu on a.WorkPlace=uu.code
+left join COM_Province rr on a.WorkProvince=rr.code
+left join COM_User pp on pp.vguid=a.RequisitionOwner
+left join COM_User oo on oo.vguid=a.RequisitionRecruiter
+left join COM_User rp on rp.vguid=a.RequisitionApprove
+left join SYS_DataDictionaryDetail aaa on a.Travel=aaa.mastercode and aaa.vguid='41BF6EF3-0F29-4A84-965A-E5C4D6150527'
+left join COM_User bbb on bbb.vguid=a.Proposer 
+LEFT JOIN COM_Position p1 ON A.JobID=p1.VGUID
+cross apply(select  count(1) as vccount from v_candidates where PositionPostVGUID=a.VGUID)  vc
+
+
+

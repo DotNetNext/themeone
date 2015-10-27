@@ -60,17 +60,18 @@ namespace ThemeOne.Areas.GridDemo.Controllers.CheckboxApp
         public JsonResult GetListSource(GridSearchParams pars)
         {
 
-            using (ListService ls = new ListService())
-            {
-                if (pars.sortdatafield == null)
-                { //默认按id降序
-                    pars.sortdatafield = "id";
-                    pars.sortorder = "desc";
-                }
-                Sqlable sable = ls.GetListSqlable();
-                var model = JQXGrid.GetWidgetsSource<list>(sable, pars, "*");//根据grid的参数自动查询
-                return Json(model, JsonRequestBehavior.AllowGet);
+            ListService ls = new ListService();
+
+            if (pars.sortdatafield == null)
+            { //默认按id降序
+                pars.sortdatafield = "id";
+                pars.sortorder = "desc";
             }
+            Sqlable sable = ls.GetListSqlable();
+            var model = JQXGrid.GetWidgetsSource<list>(sable, pars, "*");//根据grid的参数自动查询
+            GC.Collect();
+            return Json(model, JsonRequestBehavior.AllowGet);
+
         }
 
     }

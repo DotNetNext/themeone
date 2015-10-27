@@ -26,7 +26,7 @@
         selector.$jqxImgUpload().on('uploadEnd', function (event) {
             var args = event.args;
             var fileName = args.file;
-            var serverResponce = $.convert.strToJson($(args.response).text());
+            var serverResponce = $.convert.strToJson(args.response);
             if (serverResponce.IsError) {
                 jqxAlert(serverResponce.Message)
             } else {
@@ -40,9 +40,10 @@
         var fileTypes = ['.docx', '.txt', '.doc', '.jpg', '.gif', '.xls', '.xlsx'];
         selector.$jqxFileUpload().jqxFileUpload({ accept: fileTypes, localization: jqxLocalizationUpload, width: 300, "uploadUrl": '/FormControl/UploadFile/UploadFile', autoUpload: false, fileInputName: 'file' });
         selector.$jqxFileUpload().on('uploadEnd', function (event) {
+ 
             var args = event.args;
             var fileName = args.file;
-            var serverResponce = $.convert.strToJson($(args.response).text());
+            var serverResponce = $.convert.strToJson(args.response);
             if (serverResponce.IsError) {
                 jqxAlert(serverResponce.Message)
             } else {

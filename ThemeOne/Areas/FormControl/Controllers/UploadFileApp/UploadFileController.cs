@@ -9,13 +9,13 @@ namespace ThemeOne.Areas.FormControl.Controllers
 {
     public class UploadFileController : Controller
     {
-      
+
         public ActionResult Index()
         {
             return View();
         }
         [HttpPost]
-        public JsonResult UploadImg()
+        public string UploadImg()
         {
             UploadImage ui = new UploadImage();
             ui.SetAllowSize = 1;
@@ -24,10 +24,10 @@ namespace ThemeOne.Areas.FormControl.Controllers
             string saveFolder = Server.MapPath(url);
             HttpPostedFile file = System.Web.HttpContext.Current.Request.Files[0];
             var reponseMessage = ui.FileSaveAs(file, saveFolder);
-            return Json(reponseMessage);
+            return reponseMessage.ModelToJson();
         }
         [HttpPost]
-        public JsonResult UploadFile()
+        public string UploadFile()
         {
             UploadFile ui = new UploadFile();
             ui.SetMaxSizeM(5);
@@ -36,7 +36,7 @@ namespace ThemeOne.Areas.FormControl.Controllers
             ui.SetFileDirectory(saveFolder);
             HttpPostedFile file = System.Web.HttpContext.Current.Request.Files[0];
             var reponseMessage = ui.Save(file);
-            return Json(reponseMessage);
+            return (reponseMessage).ModelToJson();
         }
     }
 }
